@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+  background: linear-gradient(to bottom, #87ceeb, #f0e68c);
+  transition: background 0.8s ease;
+  min-height: 100vh;
+}
+
+header {
+  padding: 1.5rem;
+}
+
+#search-box {
+  margin-top: 1rem;
+}
+
+#city-input {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  width: 200px;
+  font-size: 1rem;
+}
+
+#search-btn {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  background-color: #ffffff33;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+#search-btn:hover {
+  background-color: #ffffff55;
+}
+
+.weather-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.day-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 140px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.day-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hourly-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.hour-card {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  width: 80px;
+  text-align: center;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.hour-card:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
