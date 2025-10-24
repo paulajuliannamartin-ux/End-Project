@@ -38,7 +38,7 @@ async function getWeather(city) {
     document.getElementById("subtitle").textContent = `7-dagarsprognos för ${name}`;
 
 
-    const hourly = data.hourly.slice(0, 24); // 24 timmar framåt
+    const hourly = data.hourly.slice(0, 24); 
     const days = data.daily.slice(0, 7).map(d => {
       const date = new Date(d.dt * 1000).toLocaleDateString("sv-SE", {
         weekday: "short",
@@ -48,9 +48,9 @@ async function getWeather(city) {
       return {
         date,
         temp: Math.round(d.temp.day),
-        weather: d.weather[0].main,      // t.ex. Clear, Rain
-        desc: d.weather[0].description,  // svensk beskrivning
-        icon: d.weather[0].icon          // ikon-id
+        weather: d.weather[0].main,      
+        desc: d.weather[0].description,  
+        icon: d.weather[0].icon         
       };
     });
 
@@ -87,11 +87,9 @@ function displayWeather(days, hourly) {
       <p>${day.temp}°C</p>
     `;
 
-    // Klickhändelse
     card.addEventListener("click", () => {
       updateTheme(day.weather);
 
-      // Visa timprognos endast för idag (index 0)
       if (index === 0) {
         showHourly(hourly);
       } else {
@@ -105,7 +103,7 @@ function displayWeather(days, hourly) {
 
 function showHourly(hourly) {
   const hourlyContainer = document.getElementById("hourly-container");
-  hourlyContainer.innerHTML = ""; // rensa
+  hourlyContainer.innerHTML = ""; 
 
   const now = new Date();
 
